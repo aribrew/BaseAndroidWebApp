@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Android WebApp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        button 
+        {
+            width: 200px;
+            height: 80px;
+            border: solid red;
+            background: red;
+            font-size: 1.5em;
+            margin: 5px;
+        }
+                
+        div
+        {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+    <body>
+        <h1>Android WebApp example</h1>
+
+        <div>
+            <button onclick="greeting()">ShowMessage test</button>
+            <button onclick="appVersion()">JS alert test</button>
+        </div>
+
+        <script>
+            function greeting ()
+            {
+        	    Android.showMessage ("Hello from Android!")
+            }
+
+            function appVersion ()
+            {
+        	    const version = Android.getAppVersion ();
+        	    alert ("[JS] App version: " + version)
+            }
+        </script>
+    </body>
+</html>
