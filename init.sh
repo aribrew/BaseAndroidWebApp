@@ -37,9 +37,6 @@ echo -e "------------------------------"
 echo "App name: $APP_NAME"
 echo "Package: $PACKAGE"
 echo "Package path: $PACKAGE_PATH"
-echo ""
-echo "Files to patch: "
-
 
 echo ""
 read -p "Press ENTER to proceed. Ctrl-C to abort."
@@ -83,6 +80,4 @@ fi
 
 sed -i "s/BaseWebApp/$APP_NAME/g" "$PROJECT_PATH/settings.gradle.kts"
 
-
-echo "Done."
-echo ""
+echo -e "\nDone.\n"
